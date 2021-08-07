@@ -1,0 +1,143 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Robot Fighter</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+    
+<body>
+<header>
+<img src="image/logo.png" >
+</header>
+   
+<form action="arm.php" method="POST">
+ 
+<div id = "div1">
+<ul>
+<li><a href="#div0">Welcome</a></li>
+<li><a href="#div2">Arm</a></li>
+<li><a href="#div3">Base</a></li>
+<li><a href="SSID.html">Logout</a></li>
+</ul>
+</div>
+
+
+<div id = "div0">
+  
+<br><br><br><br><br><br>
+<h2>Welcome</h2><h3>to Robot Fighter Control Panel</h3>
+
+</div>
+ 
+  
+<div id = "div2">
+<br><br><br><br><br>  
+
+<h1 style="color:darkslategray">Arm Control Panel</h1><br>
+
+<article> 
+ 
+
+
+<p>
+<label>Motor 01:</label>
+<input type = "range" class = "slider" id = "m1" value = "90" min = "0" max = "180" name = "motor1" />
+<label id = "motor1" style = "padding-left:20px;"></label>
+</p>
+  
+<p>
+<label>Motor 02:</label>
+<input type = "range" class = "slider" id = "m2" value = "90" min = "0" max = "180" name = "motor2" />
+<label id = "motor2" style = "padding-left:20px;"></label>
+</p>
+
+<p>
+<label>Motor 03:</label>
+<input type = "range" class = "slider" id ="m3" value = "90" min = "0" max = "180" name = "motor3" />
+<label id = "motor3" style = "padding-left:20px;"></label>
+</p>
+  
+<p>
+<label>Motor 04:</label>
+<input type = "range" class = "slider" id = "m4" value = "90" min = "0" max = "180" name = "motor4" />
+<label id = "motor4" style = "padding-left:20px;"></label>
+</p>
+    
+<p>
+<label>Motor 05:</label>
+<input type = "range" class = "slider" id = "m5" value = "90" min = "0" max = "180" name = "motor5" />
+<label id = "motor5" style = "padding-left:20px;"></label>
+</p>
+  
+<p>
+<label>Motor 06:</label>
+<input type = "range" class = "slider" id ="m6" value = "90" min = "0" max = "180" name = "motor6" />
+<label id = "motor6" style = "padding-left:20px;"></label>
+</p><br><br>
+                    
+<input type="submit" class="button button1" value="Save" name="save">
+
+<input type="submit" class="button button2" value="ON" name="on">
+
+<input type="submit" class="button button3" value="OFF" name="off">
+
+</article>
+</div>
+</form>
+
+<hr>
+
+<form action="base.php" method="POST">
+<div id="div3"><br><br><br>
+
+<h1 style="color:darkslategray">Base Control Panel</h1>
+
+<article><br><br>
+
+<input class="btn" type="submit" value="Forward" name ="forward" style="font-size: 20px; color:#333; font-family: Georgia, serif; 
+background: rgb(153, 216, 163); border-radius: 10px; padding: 5px 20px;"><br><br><br>
+
+<input class="btn" type="submit" value="Left" name ="left" style="font-size: 20px; color:#333; font-family: Georgia, serif; 
+background: rgb(228, 119, 210); border-radius: 10px; padding: 5px 30px">
+
+<input class="btn" type="submit" value="Stop" name ="stop" style="font-size: 20px; color:#333; font-family: Georgia, serif; 
+background: rgb(255, 116, 116); border-radius: 10px; padding: 5px 30px">
+
+<input class="btn" type="submit" value="Right" name ="right" style="font-size: 20px; color:#333; font-family: Georgia, serif; 
+background: rgb(228, 119, 210); border-radius: 10px; padding: 5px 25px"><br><br><br>
+
+<input class="btn" type="submit" value="Backward" name ="backward"style="font-size: 20px; color:#333; font-family: Georgia, serif; 
+background: rgb(153, 216, 163); border-radius: 10px; padding: 5px 15px"><br><br><br>
+
+</article>
+</div>
+</form>
+
+<footer>
+<br>
+<p>Smart Methods Est ©  All rights reserved 2020</p>
+</footer>
+
+
+</body>
+<script src="main.js"></script>
+<script src="Buto.json"></script>
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "8748abcf-16f4-4915-9c0d-cb5e7f6bcf60", // The ID of this integration.
+        region: "eu-de", // The region your integration is hosted in.
+        serviceInstanceID: "709bf362-6a16-4131-9565-a7475d8b9c00", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</html>

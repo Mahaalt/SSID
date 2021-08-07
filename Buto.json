@@ -1,0 +1,274 @@
+{
+  "intents": [
+    {
+      "intent": "Arm",
+      "examples": [
+        {
+          "text": "What does the arm do?"
+        },
+        {
+          "text": "Why there is arm?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Base",
+      "examples": [
+        {
+          "text": "What does the base do?"
+        },
+        {
+          "text": "Why there is a base?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Hello",
+      "examples": [
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "slam"
+        },
+        {
+          "text": "yes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Robot",
+      "examples": [
+        {
+          "text": "What does the robot do ?"
+        },
+        {
+          "text": "What is this?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Thank",
+      "examples": [
+        {
+          "text": "thanks for the information"
+        },
+        {
+          "text": "thanks for your help"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "You really helped me"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1626216064905",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Arm",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The arm is intended to hold a sharp tool to explode the balloons of other robots.\nTo control it, go to the interface of the robot arm, move the sliders and press save, To stop it press off."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Arm",
+      "dialog_node": "node_1_1626215236134",
+      "previous_sibling": "node_2_1626214911477"
+    },
+    {
+      "type": "standard",
+      "title": "Robot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This is a Robot called Robot Fighter, Its goal is to do combat competitions with other fighting robots, and this is the Interface. And this is the interface for controlling it.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Robot",
+      "dialog_node": "node_2_1626214911477",
+      "previous_sibling": "node_8_1626128538610"
+    },
+    {
+      "type": "standard",
+      "title": "Base",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The base is intended for carrying the arm on it and the equipment needed to move the robot, and it is considered the basis of the robot.\nTo control it, go to the base interface and press the button in the direction you want the robot to move, and to turn it off, press stop."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Base",
+      "dialog_node": "node_2_1626215694982",
+      "previous_sibling": "node_1_1626215236134"
+    },
+    {
+      "type": "standard",
+      "title": "Thank",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You're Welcome :)"
+              },
+              {
+                "text": "Always at your service"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Thank",
+      "dialog_node": "node_4_1626216064905",
+      "previous_sibling": "node_2_1626215694982"
+    },
+    {
+      "type": "standard",
+      "title": "Greet",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Need Help? Always Ready to Help You"
+              },
+              {
+                "text": "How Can I Help You?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Hello",
+      "dialog_node": "node_8_1626128538610",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello I am Buto, Nice to meet you"
+              },
+              {
+                "text": "Hi again"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "welcome",
+  "language": "en",
+  "description": ""
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LOGIN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<style>
+
+body {
+	background:#073131b0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.login{
+	position: relative;
+	width: 370px;
+	height: auto;
+	background-color: white;
+	padding: 40px 35px 60px;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+	color: #752764;	
+}
+
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+label {
+	color: #752764;
+	font-size: 18px;
+	padding: 10px;
+}
+
+
+button{
+	margin-top: 20px;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 15px;
+	cursor: pointer;
+	float: center;
+	background: #00292a;
+	padding: 10px 15px;
+	color: #fff;	
+	border: none;
+	width: 100%;
+}
+
+button:hover{
+	border: 1px solid;
+	opacity: .7;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<form action="index.html" method="POST">
+<div class="login">
+	
+<h2>LOGIN</h2>
+
+<label>SSID</label>
+<i class="fas fa-wifi"></i>
+<input type="text" name="uname" placeholder="SSID"><br>
+
+<label>Password</label>
+<I class="fas fa-lock"></I>
+<input type="password" name="password" placeholder="Password"><br>
+
+<button type="submit">Login</button>
+
+<label>Forget Password ? <a href="#">Click Here</a></label>
+
+</form>
+</div>
+</body>
+</html>
