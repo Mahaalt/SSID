@@ -9,3 +9,5 @@ Still not connect it with database or anything else.
 I will continue develop this page to become usable.
  
 In control panel, I was add a button called Logout to logout from the page and return to the login page.
+
+To visit my control page click here [Control Panel](https://mahaalt.github.io/SSID-and-Password-Page/)
